@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Exercise 3 data story for television energy consumption." />
+  <title>Power Appliances | Data Story</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .story-intro{max-width:850px}
+    .story-question{border-left:4px solid #1f6feb;padding:1rem 1.25rem;background:#f6f8fb;border-radius:0 10px 10px 0;margin-top:1.25rem}
+    .visualisation-grid{display:grid;grid-template-columns:1fr;gap:2rem;margin-top:1.5rem}
+    .visual-card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:2rem;box-shadow:0 8px 24px rgba(0,0,0,.05);width:100%;box-sizing:border-box}
+    .visual-card h3{font-size:1.45rem;margin-bottom:.75rem}
+    .visual-card .chart-image{display:block;width:100%;max-width:1200px;height:auto;margin:1.5rem auto 0;border-radius:10px}
+    .visual-card .placeholder-note{max-width:1050px;margin:1.25rem auto 0}
+    .visual-card p{max-width:1100px}
+
+    .chart-placeholder{position:relative;min-height:250px;margin-top:1rem;padding:1.25rem 1.25rem 1rem 3.25rem;border:1px dashed #aeb7c4;border-radius:10px;background:#fafbfc}
+    .chart-area{height:185px;border-left:2px solid #6b7280;border-bottom:2px solid #6b7280;display:flex;align-items:flex-end;gap:4%;padding:0 3% 0 4%}
+    .chart-bar{flex:1;background:#cbd5e1;min-width:28px;border-radius:5px 5px 0 0;position:relative}
+    .chart-bar span{position:absolute;bottom:-1.6rem;left:50%;transform:translateX(-50%);font-size:.75rem;white-space:nowrap;color:#4b5563}
+    .axis-y{position:absolute;left:.4rem;top:50%;transform:rotate(-90deg) translateX(-50%);transform-origin:left top;font-size:.78rem;color:#4b5563}
+    .axis-x{text-align:center;font-size:.78rem;color:#4b5563;margin-top:2rem}
+    .placeholder-note{margin:1rem 0 0;color:#6b7280;font-size:.9rem}
+    .story-flow{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem}
+    .flow-step{padding:1.25rem;background:#f6f8fb;border-radius:12px}
+    .flow-number{font-weight:700;margin-bottom:.5rem}
+    @media(max-width:800px){
+      .story-flow{grid-template-columns:1fr}
+      .visual-card{padding:1rem}
+      .visual-card h3{font-size:1.25rem}
+    }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <nav class="navbar" aria-label="Main navigation">
+    <a class="brand" href="index.html" aria-label="Power Appliances home"><img src="assets/img/PowerIcon.png" alt="Power logo" /></a>
+    <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="televisions.html">Televisions</a></li>
+      <li><a class="active" href="story.html" aria-current="page">Data Story</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="page-banner">
+    <div>
+      <p class="eyebrow">COS30045 · EXERCISE 3</p>
+      <h1>Television Energy Data Story</h1>
+      <p>Exploring television energy consumption through questions, visualisations and supporting context.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading story-intro">
+      <p class="eyebrow">THE STORY</p>
+      <h2>What can the television data tell us?</h2>
+      <p>This data story is designed to help a general audience understand how characteristics of televisions can relate to energy consumption.</p>
+      <div class="story-question"><strong>Main question:</strong> How does television screen size relate to labelled annual energy consumption, and what does the dataset tell us about the brands represented?</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading"><p class="eyebrow">STEP 1 · AUDIENCE</p><h2>Who is this story for?</h2></div>
+    <div class="card-grid">
+      <article class="info-card"><div class="icon-circle">01</div><h3>Everyday Consumers</h3><p>People comparing televisions who want an easy-to-understand explanation of energy use.</p></article>
+      <article class="info-card"><div class="icon-circle">02</div><h3>Students &amp; Learners</h3><p>Readers interested in seeing how real data can be transformed into a visual story.</p></article>
+      <article class="info-card"><div class="icon-circle">03</div><h3>Energy-Conscious Users</h3><p>Users who want to understand relationships between television specifications and electricity consumption.</p></article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading"><p class="eyebrow">STEP 2 · QUESTIONS</p><h2>What does the audience want to know?</h2></div>
+    <div class="card-grid">
+      <article class="info-card"><h3>Question 1</h3><p>What brands are represented in the television dataset?</p></article>
+      <article class="info-card"><h3>Question 2</h3><p>Does television screen size appear to be associated with higher labelled annual energy consumption?</p></article>
+      <article class="info-card"><h3>Question 3</h3><p>What should consumers consider when comparing television energy consumption?</p></article>
+    </div>
+  </section>
+
+  <section class="section highlight-section">
+    <div class="section-heading"><p class="eyebrow">STEP 3 · STORYBOARD</p><h2>How the website tells the story</h2></div>
+    <div class="story-flow">
+      <div class="flow-step"><div class="flow-number">01 · Context</div><p>Introduce television energy consumption and explain why the topic matters to consumers.</p></div>
+      <div class="flow-step"><div class="flow-number">02 · Evidence</div><p>Present charts that make patterns and differences in the dataset easier to compare.</p></div>
+      <div class="flow-step"><div class="flow-number">03 · Takeaway</div><p>Explain what the observed patterns mean and identify limitations before drawing conclusions.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <p class="eyebrow">STEP 3 · VISUALISATION</p>
+      <h2>What does the television data show?</h2>
+      <p>Two visualisations are used to communicate the main findings from the television dataset. The first shows the composition of brands in the dataset, while the second explores the relationship between screen size and labelled annual energy consumption.</p>
+    </div>
+
+    <div class="visualisation-grid">
+      <article class="visual-card">
+        <h3>TV Brands in the Dataset</h3>
+        <p>The pie chart shows that the dataset contains televisions from a range of brands. Samsung is the largest individually identified brand, followed by Kogan and LG. However, the combined <strong>Other</strong> category represents the largest portion overall.</p>
+        <img class="chart-image" src="../energy-webpage-v1/assets/img/Pie_Chart.png" alt="Pie chart showing the distribution of television brands including Samsung, Kogan, LG, Hisense, Eko and Other." />
+        <p class="placeholder-note"><strong>Story:</strong> The dataset is not dominated by one manufacturer. Instead, it represents a diverse range of television brands, which provides variety when examining television characteristics and energy consumption.</p>
+      </article>
+
+      <article class="visual-card">
+        <h3>Bigger Screens, Higher Energy Consumption</h3>
+        <p>The bar chart compares screen size in inches with labelled annual energy consumption in kWh/year. The overall pattern shows that larger televisions generally have higher labelled annual energy consumption.</p>
+        <img class="chart-image" src="../energy-webpage-v1/assets/img/Bar_Chart.png" alt="Bar chart showing labelled annual energy consumption increasing generally with television screen size." />
+        <p class="placeholder-note"><strong>Story:</strong> Smaller televisions generally have lower annual energy consumption, while the largest screens show substantially higher values. The pattern is not perfectly consistent, so screen size is not the only factor affecting energy consumption.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section highlight-section">
+    <div class="section-heading">
+      <p class="eyebrow">THE MAIN FINDING</p>
+      <h2>Bigger Screens, Bigger Energy Consumption</h2>
+      <p>The two charts tell complementary stories. The pie chart shows that the dataset contains a diverse range of television brands, while the bar chart reveals a clearer relationship between screen size and labelled annual energy consumption.</p>
+    </div>
+    <div class="two-column">
+      <div>
+        <p>The brand distribution tells us about the <strong>composition of the dataset</strong>. Samsung has the largest share among the individually named brands, but the many brands grouped into “Other” make up the largest portion overall.</p>
+        <p>The screen-size chart provides the stronger energy-related finding. As screen size increases, labelled annual energy consumption generally increases as well. There are some fluctuations between individual screen sizes, which shows that screen size alone does not determine energy consumption.</p>
+      </div>
+      <div class="about-box">
+        <h3>What should consumers remember?</h3>
+        <ul>
+          <li>Televisions in the dataset come from a variety of brands.</li>
+          <li>Larger screens generally have higher labelled annual energy consumption.</li>
+          <li>Screen size is useful for comparing energy use, but it is not the only factor.</li>
+          <li>Individual models can differ even when their screen sizes are similar.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading"><p class="eyebrow">INTERPRETATION</p><h2>How we interpret the charts</h2></div>
+    <div class="two-column">
+      <div>
+        <p>The charts are descriptive: they show patterns in the available dataset. The bar chart suggests an association between screen size and labelled annual energy consumption, but it does not prove that screen size alone causes higher energy use.</p>
+        <p>Other characteristics of a television, such as its model and display technology, may also contribute to differences in energy consumption. Therefore, the findings should be used to understand the dataset rather than as a guarantee of the energy use of every television on the market.</p>
+      </div>
+      <div class="about-box"><h3>Key message</h3><p><strong>When comparing televisions, a larger screen can be associated with greater annual energy consumption, so screen size is one useful factor to consider alongside the television's labelled energy information.</strong></p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading"><p class="eyebrow">ABOUT THE DATA</p><h2>Data source, processing and limitations</h2></div>
+    <div class="card-grid">
+      <article class="info-card"><h3>Data Source</h3><p>Insert the exact name, provider and URL or citation of the television energy dataset used for Exercise 3.</p></article>
+      <article class="info-card"><h3>Data Processing</h3><p>Document filtering, cleaning, missing-value handling, calculations and grouping performed before visualisation.</p></article>
+      <article class="info-card"><h3>Privacy</h3><p>State whether the dataset contains personal information. If it is product-level data, explain that no individual privacy data is presented.</p></article>
+      <article class="info-card"><h3>Accuracy &amp; Limitations</h3><p>Results depend on the quality, completeness and definitions used by the original dataset and may not represent every television model.</p></article>
+      <article class="info-card"><h3>Ethics</h3><p>Present the data honestly, avoid misleading scales or selective reporting, and clearly identify uncertainty and limitations.</p></article>
+      <article class="info-card"><h3>AI Declaration</h3><p>Generative AI was used to assist with website structure, wording and code preparation. Dataset analysis and final interpretation should be checked against the original data.</p></article>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>&copy; <span id="current-year"></span> Cheah Rui Huan J24043247. All rights reserved.</p>
+    <p>Generative AI was used to assist with website development and content preparation.</p>
+  </div>
+</footer>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
