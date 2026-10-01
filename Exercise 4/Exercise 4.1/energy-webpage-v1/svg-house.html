@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="COS30045 Exercise 4.1 SVG house and garden demonstrating SVG shapes." />
+  <title>Power Appliances | SVG House</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    * {
+        box-sizing: border-box
+    }
+
+.coordinate-note {
+    background: var(--accent2);
+    border-left: 4px solid var(--accent);
+    padding: 16px 18px;
+    border-radius: 8px;
+    outline: 2px solid #667085;
+}
+
+    .shape-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 16px
+}
+
+.code-box {
+    background: #172019;
+    color: #eaf5ed;
+    padding: 18px;
+    border-radius: 12px;
+    overflow: auto;
+    font-family: ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size: .88rem
+}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <nav class="navbar" aria-label="Main navigation">
+    <a class="brand" href="index.html" aria-label="Power Appliances home"><img src="assets/img/PowerIcon.png" alt="Power logo" /></a>
+    <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="televisions.html">Televisions</a></li>
+      <li><a href="story.html">Story</a></li>
+      <li><a class="active" href="svg-house.html" aria-current="page">SVG House</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section class="page-banner"><div>
+    <p class="eyebrow">COS30045 · EXERCISE 4.1</p>
+    <h1>SVG House &amp; Garden</h1>
+    <p>A custom SVG illustration demonstrating SVG primitives, coordinates, styling, text and grouped elements.</p>
+  </div></section>
+
+  <section class="section">
+    <div class="section-heading">
+      <p class="eyebrow">STEP 1 · CREATE A PICTURE</p>
+      <h2>House and Garden Using SVG Shapes</h2>
+      <p>The illustration below demonstrates the different SVG primitives requested in Exercise 4.1.</p>
+    </div>
+    <div class="svg-stage"><img src="../energy-webpage-v1/assets/img/svg.png" alt="Colourful house and garden drawn using SVG shapes" style="width:100%;height:auto;display:block;" /></div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <p class="eyebrow">STEP 2 · COORDINATE SYSTEM</p>
+      <h2>Understanding SVG Coordinates</h2>
+      <p>SVG coordinates start at the top-left corner. The x-coordinate increases from left to right, while the y-coordinate increases from top to bottom.</p>
+    </div>
+    <div class="coordinate-note"><strong>Example:</strong> the house body starts at <code>(300, 245)</code>. Changing x moves the shape horizontally; changing y moves it vertically.</div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <p class="eyebrow">STEP 3 · CUSTOMISE YOUR PICTURE</p>
+      <h2>Custom Features</h2>
+      <p>The picture was customised with a chimney, garden fence, flowers, tree, bushes, curved pathway, colours, strokes and labels.</p>
+    </div>
+    <div class="shape-grid">
+      <article class="info-card"><h3>House</h3><p>Rectangles form the walls, door and chimney. A polygon creates the roof.</p></article>
+      <article class="info-card"><h3>Garden</h3><p>Circles, ellipses, lines and a polyline create the flowers, tree and garden features.</p></article>
+      <article class="info-card"><h3>Path</h3><p>A curved <code>&lt;path&gt;</code> creates the walkway leading to the front door.</p></article>
+      <article class="info-card"><h3>Text</h3><p><code>&lt;text&gt;</code> elements label the drawing and demonstrate annotation.</p></article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <p class="eyebrow">STEP 4 · GROUP ELEMENT</p>
+      <h2>Two Windows Using &lt;g&gt;</h2>
+      <p>The two windows are placed inside one group so common styling can be applied to both. Translation is then used to position the second window.</p>
+    </div>
+    <div class="code-box">&lt;g id="windows" fill="#9bd7ee" stroke="#315c6b" stroke-width="6"&gt;<br>&nbsp;&nbsp;&lt;g transform="translate(0,0)"&gt;...first window...&lt;/g&gt;<br>&nbsp;&nbsp;&lt;g transform="translate(235,0)"&gt;...second window...&lt;/g&gt;<br>&lt;/g&gt;</div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading"><p class="eyebrow">SHAPE CHECKLIST</p><h2>SVG Elements Demonstrated</h2></div>
+    <div class="card-grid">
+      <article class="info-card"><h3>&lt;rect&gt;</h3><p>House, door, chimney, ground and windows.</p></article>
+      <article class="info-card"><h3>&lt;circle&gt;</h3><p>Sun, flowers and door handle.</p></article>
+      <article class="info-card"><h3>&lt;ellipse&gt;</h3><p>Clouds and tree canopy.</p></article>
+      <article class="info-card"><h3>&lt;line&gt;</h3><p>Window divisions, fence, flower stems and annotations.</p></article>
+      <article class="info-card"><h3>&lt;polyline&gt;</h3><p>Garden bush outline.</p></article>
+      <article class="info-card"><h3>&lt;polygon&gt;</h3><p>Triangular roof.</p></article>
+      <article class="info-card"><h3>&lt;path&gt;</h3><p>Curved garden pathway.</p></article>
+      <article class="info-card"><h3>&lt;text&gt;</h3><p>Title, coordinate annotation and garden label.</p></article>
+    </div>
+  </section>
+</main>
+<footer class="site-footer"><div class="footer-content">
+  <p>&copy; <span id="current-year"></span> Cheah Rui Huan J24043247. All rights reserved.</p>
+  <p>Generative AI was used to assist with website development and SVG preparation.</p>
+</div></footer>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
