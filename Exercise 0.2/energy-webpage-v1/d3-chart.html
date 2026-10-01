@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="D3.js TV brand bar chart for COS30045 Exercises 4.3 to 4.6." />
+    <title>Power Appliances | D3 Bar Chart</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar" aria-label="Main navigation">
+        <a class="brand" href="index.html" aria-label="Power Appliances home">
+          <span class="brand-text">POWER</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="televisions.html">Televisions</a></li>
+          <li><a class="active" href="d3-chart.html" aria-current="page">D3 Bar Chart</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-banner">
+        <div>
+          <p class="eyebrow">COS30045 • EXERCISES 4.3–4.6</p>
+          <h1>D3 TV Brand Bar Chart</h1>
+          <p>A D3-generated bar chart built progressively from an SVG canvas, CSV data binding, rectangles and responsive scales.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">D3 VISUALISATION</p>
+          <h2>TV Brand Counts</h2>
+          <p>The chart reads <strong>data/tvBrandCount.csv</strong>. The CSV must contain two columns named <strong>brand</strong> and <strong>count</strong>. The x-axis uses a linear scale for counts and the y-axis uses a band scale for brand categories.</p>
+        </div>
+
+        <div class="d3-chart-card">
+          <div class="d3-chart-header">
+            <div>
+              <h3>Televisions by Brand</h3>
+              <p>Exercise 4.6: scaled D3 bar chart</p>
+            </div>
+            <span class="d3-badge">D3.js</span>
+          </div>
+          <div class="responsive-svg-container" aria-label="D3 bar chart area"></div>
+          <p id="chart-status" class="chart-status">Loading TV brand data...</p>
+        </div>
+      </section>
+
+      <section class="section highlight-section">
+        <div class="two-column">
+          <div>
+            <p class="eyebrow">WHAT THIS DEMONSTRATES</p>
+            <h2>From Data to SVG</h2>
+            <p>The chart demonstrates the progression from creating an SVG canvas to loading CSV data, binding records to SVG rectangles and using D3 scales to make the visualisation fit its available space.</p>
+          </div>
+          <div class="check-list">
+            <div><span>✓</span> D3 v7 is loaded separately from the existing JavaScript.</div>
+            <div><span>✓</span> CSV rows are converted into numeric count values.</div>
+            <div><span>✓</span> Each data record becomes one SVG rectangle.</div>
+            <div><span>✓</span> scaleLinear() controls bar width.</div>
+            <div><span>✓</span> scaleBand() controls bar position and thickness.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">EXERCISE PROGRESSION</p>
+          <h2>Exercises 4.3–4.6</h2>
+        </div>
+        <div class="card-grid">
+          <article class="info-card"><div class="icon-circle">4.3</div><h3>D3 setup</h3><p>Creates a responsive SVG canvas and tests it with a rectangle.</p></article>
+          <article class="info-card"><div class="icon-circle">4.4</div><h3>Load CSV data</h3><p>Uses d3.csv(), converts count to a number and checks basic data properties.</p></article>
+          <article class="info-card"><div class="icon-circle">4.5</div><h3>Bind and draw</h3><p>Joins the data to SVG rectangles and positions the bars.</p></article>
+          <article class="info-card"><div class="icon-circle">4.6</div><h3>Scale the chart</h3><p>Uses linear and band scales so the chart adapts to its SVG viewBox.</p></article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p>&copy; <span id="current-year"></span> Cheah Rui Huan J24043247. All rights reserved.</p>
+        <p>Generative AI was used to assist with website development and content preparation.</p>
+      </div>
+    </footer>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
