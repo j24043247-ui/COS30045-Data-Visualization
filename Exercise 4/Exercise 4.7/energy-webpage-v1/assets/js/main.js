@@ -1,6 +1,10 @@
 // COS30045 Exercises 4.3–4.7
 // D3 interactive TV brand bar chart
 
+d3.select(".d3-demo-container")
+    .append("b")
+    .text("Purchasing a low energy consumption TV will help with your energy bills!");
+
 document.addEventListener("DOMContentLoaded", function () {
 
     const container = d3.select(".responsive-svg-container");

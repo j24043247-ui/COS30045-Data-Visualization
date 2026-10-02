@@ -1,6 +1,11 @@
 // COS30045 Exercises 4.3–4.6
 // Separate D3 file: do not place D3 code in script.js.
 
+
+d3.select(".d3-demo-container")
+    .append("b")
+    .text("Purchasing a low energy consumption TV will help with your energy bills!");
+
 document.addEventListener("DOMContentLoaded", function () {
     const container = d3.select(".responsive-svg-container");
     const status = d3.select("#chart-status");
