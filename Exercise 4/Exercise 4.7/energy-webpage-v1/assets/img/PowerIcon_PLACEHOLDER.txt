@@ -1,0 +1,1 @@
+Place the provided PowerIcon.png file in this folder and remove this text file if desired.
