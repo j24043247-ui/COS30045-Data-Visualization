@@ -1,0 +1,41 @@
+// ================================================================
+// EXERCISE 6.1 - LOAD DATA
+// Loads the TV dataset and prepares energyConsumption as a number.
+// ================================================================
+
+d3.csv("assets/data/Ex6_TVdata_withStar.csv", function (d) {
+    return {
+        brand: d.brand,
+        model: d.model,
+        screenSize: +d.screenSize,
+        screenTech: d.screenTech,
+        star: +d.star,
+        energyConsumption: +d.energyConsumption
+    };
+})
+.then(function (data) {
+    // Keep only records with a valid numeric energy consumption value.
+    const validData = data.filter(function (d) {
+        return Number.isFinite(d.energyConsumption);
+    });
+
+    console.log("Exercise 6.1 data:", validData);
+    console.log("Exercise 6.1 number of valid rows:", validData.length);
+    console.log(
+        "Exercise 6.1 energy extent:",
+        d3.extent(validData, function (d) {
+            return d.energyConsumption;
+        })
+    );
+
+    // Send the loaded data to the histogram drawing function.
+    drawHistogram(validData);
+})
+.catch(function (error) {
+    console.error("Exercise 6.1 data loading error:", error);
+
+    const status = document.getElementById("histogram-status");
+    if (status) {
+        status.textContent = "Unable to load the Exercise 6.1 TV dataset.";
+    }
+});

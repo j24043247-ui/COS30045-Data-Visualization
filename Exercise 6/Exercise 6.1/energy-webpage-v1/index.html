@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Power appliance energy information and calculator for the Australian market."
+    />
+    <title>Power Appliances | Home</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Exercise 6.1 visualisation styles -->
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/visualisation.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar" aria-label="Main navigation">
+        <a class="brand" href="index.html" aria-label="Power Appliances home">
+          <img src="assets/img/PowerIcon.png" alt="Power logo" />
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+          <li>
+            <a class="active" href="index.html" aria-current="page">Home</a>
+          </li>
+          <li><a href="televisions.html">Televisions</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">SMARTER ENERGY CHOICES</p>
+          <h1>Understand Your Appliance Energy Consumption</h1>
+          <p>
+            Discover how everyday appliances contribute to household electricity
+            consumption in Australia and learn how simple usage changes can help
+            reduce energy costs.
+          </p>
+          <a class="button" href="#calculator">Try the Energy Calculator</a>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">AUSTRALIAN MARKET</p>
+          <h2>Appliance Energy Consumption</h2>
+          <p>
+            Appliances make up an important part of household electricity use.
+            Understanding an appliance's power rating and how long it operates
+            can help households make more informed energy decisions.
+          </p>
+        </div>
+
+        <div class="card-grid">
+          <article class="info-card">
+            <div class="icon-circle">⚡</div>
+            <h3>Power Usage</h3>
+            <p>
+              Electrical appliances are commonly rated in watts. Higher wattage
+              generally means more electricity is consumed while the appliance
+              is operating.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <div class="icon-circle">◷</div>
+            <h3>Usage Time</h3>
+            <p>
+              The amount of time an appliance is used also affects its total
+              energy consumption. Reducing unnecessary operating time can lower
+              electricity use.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <div class="icon-circle">▣</div>
+            <h3>Energy Efficiency</h3>
+            <p>
+              Energy-efficient appliances can provide the same useful service
+              while using less electricity, helping households manage long-term
+              energy costs.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section calculator-section" id="calculator">
+        <div class="section-heading">
+          <p class="eyebrow">OPTIONAL JAVASCRIPT CHALLENGE</p>
+          <h2>Appliance Energy Calculator</h2>
+          <p>
+            Enter the appliance power, average daily usage and electricity price
+            to estimate energy consumption and cost.
+          </p>
+        </div>
+
+        <div class="calculator">
+          <form id="energy-form" novalidate>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="power">Appliance power usage (watts)</label>
+                <input
+                  id="power"
+                  name="power"
+                  type="number"
+                  min="0.01"
+                  step="0.01"
+                  placeholder="e.g. 150"
+                  required
+                />
+                <small
+                  >Find the appliance power rating on its label or
+                  specifications.</small
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="hours">Average hours of use per day</label>
+                <input
+                  id="hours"
+                  name="hours"
+                  type="number"
+                  min="0"
+                  max="24"
+                  step="0.1"
+                  placeholder="e.g. 5"
+                  required
+                />
+                <small>Enter a value between 0 and 24 hours.</small>
+              </div>
+
+              <div class="form-group">
+                <label for="price">Electricity price (cents per kWh)</label>
+                <input
+                  id="price"
+                  name="price"
+                  type="number"
+                  min="0"
+                  step="0.01"
+                  placeholder="e.g. 30"
+                  required
+                />
+                <small>Use your electricity bill's rate where possible.</small>
+              </div>
+            </div>
+
+            <button class="button" type="submit">Calculate Energy Use</button>
+          </form>
+
+          <div class="results-panel" id="results" aria-live="polite">
+            <h3>Results</h3>
+            <p class="results-placeholder">
+              Enter your appliance details and select “Calculate Energy Use”.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section faq-section">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2>Frequently Asked Questions</h2>
+          <p>Click a question to reveal or hide its answer.</p>
+        </div>
+
+        <div class="faq-list">
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>What is appliance energy consumption?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Appliance energy consumption describes the amount of electrical
+                energy an appliance uses while operating. It is commonly
+                measured in kilowatt-hours (kWh).
+              </p>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>What does wattage mean?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Wattage indicates the rate at which an electrical appliance uses
+                power. A 1000-watt appliance uses power at a rate of 1 kilowatt
+                while operating.
+              </p>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>How can I reduce appliance energy use?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                You can reduce energy use by choosing efficient appliances,
+                avoiding unnecessary operation, using appropriate settings and
+                switching appliances off when they are not required.
+              </p>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>What is a kilowatt-hour?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                A kilowatt-hour is a unit of energy. It represents using 1
+                kilowatt of power continuously for 1 hour.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- =========================================================
+           EXERCISE 6.1 - HISTOGRAM
+           New D3.js visualisation section. Existing webpage content above
+           is preserved; this section is added for Exercise 6.1.
+           ========================================================= -->
+      <section class="section exercise-6-section" id="exercise-6-1">
+        <div class="section-heading">
+          <p class="eyebrow">EXERCISE 6.1</p>
+          <h2>TV Energy Consumption Histogram</h2>
+          <p>
+            This histogram shows the frequency distribution of TV energy
+            consumption from the January 2026 television dataset.
+          </p>
+        </div>
+
+        <div class="visualisation-card">
+          <div id="histogram" class="responsive-svg-container" aria-label="Histogram of TV energy consumption"></div>
+          <p id="histogram-status" class="chart-status" aria-live="polite">Loading histogram data...</p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p>
+          &copy; <span id="current-year"></span> Cheah Rui Huan J24043247. All
+          rights reserved.
+        </p>
+        <p>
+          Generative AI was used to assist with website development and content
+          preparation.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <!-- =========================================================
+         EXERCISE 6.1 - D3.js HISTOGRAM SCRIPTS
+         Script order is important: data -> constants -> interactions -> chart.
+         ========================================================= -->
+    <script src="assets/js/load-data.js"></script>
+    <script src="assets/js/shared-constants.js"></script>
+    <script src="assets/js/interactions.js"></script>
+    <script src="assets/js/histogram.js"></script>
+  </body>
+</html>

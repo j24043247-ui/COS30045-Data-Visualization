@@ -1,0 +1,24 @@
+/* ================================================================
+   EXERCISE 6.1 - BASE CSS
+   Shared base styles for the Exercise 6 visualisation area.
+   ================================================================ */
+
+.exercise-6-section {
+    background: #f6f9fc;
+}
+
+.visualisation-card {
+    width: 100%;
+    padding: 28px;
+    background: #ffffff;
+    border: 1px solid #dce4ee;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(23, 32, 51, 0.08);
+}
+
+.chart-status {
+    margin-top: 12px;
+    color: #667085;
+    font-size: 0.9rem;
+    text-align: center;
+}
