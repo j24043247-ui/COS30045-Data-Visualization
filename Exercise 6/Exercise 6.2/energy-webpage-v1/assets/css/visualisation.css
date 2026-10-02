@@ -1,0 +1,87 @@
+/* ================================================================
+   EXERCISE 6.1 - VISUALISATION CSS
+   Shared styles for the D3 visualisations.
+   ================================================================ */
+
+.responsive-svg-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.responsive-svg-container svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+}
+
+.axis-label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    fill: #172033;
+}
+
+.axis text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    fill: #667085;
+}
+
+.axis path,
+.axis line {
+    stroke: #aeb9c8;
+}
+
+.histogram-bar {
+    fill: #0b5ed7;
+    transition: opacity 0.15s ease, fill 0.15s ease;
+}
+
+.histogram-bar:hover {
+    fill: #084298;
+    opacity: 0.9;
+}
+
+.histogram-grid line {
+    stroke: #e5ebf3;
+    stroke-width: 1;
+}
+
+.histogram-grid path {
+    display: none;
+}
+
+.histogram-title {
+    font-size: 20px;
+    font-weight: 700;
+    fill: #172033;
+}
+
+@media screen and (max-width: 596px) {
+    .responsive-svg-container {
+        margin-bottom: 20px;
+    }
+
+    .visualisation-card {
+        padding: 16px;
+    }
+
+    .axis-label {
+        font-size: 12px;
+    }
+}
+
+
+/* ================================================================
+   EXERCISE 6.2 - FILTERED HISTOGRAM TRANSITIONS
+   ================================================================ */
+.histogram-bar {
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.histogram-bar:hover {
+    opacity: 0.82;
+}
