@@ -54,3 +54,27 @@ d3.csv("assets/data/tv_2026.csv", d => {
     // Pass data to bar chart function
     drawBarChart(data);
 });
+
+//Exercise 4.5: Create a bar chart using D3.js
+const drawBarChart = data => {
+
+    // Height of each bar
+    const barHeight = 20;
+
+    // Space between each bar
+    const barSpacing = 5;
+
+    svg
+        .selectAll("rect")
+        .data(data)
+        .join("rect")
+        .attr("class", d => {
+            console.log(d);
+            return `bar bar-${d.count}`;
+        })
+        .attr("width", d => d.count)
+        .attr("height", barHeight)
+        .attr("fill", "blue")
+        .attr("x", 0)
+        .attr("y", (d, i) => i * (barHeight + barSpacing));
+};
